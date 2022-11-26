@@ -12,8 +12,13 @@ const AuthProvider = ({ children }) => {
     setAuth(getFromLocalStorage("auth"));
   }, []);
 
+  // checks if the user is authenticated or not
+  const isAuth = () => {
+    return auth ? true : false;
+  };
+
   return (
-    <AuthContext.Provider value={[auth, setAuth]}>
+    <AuthContext.Provider value={[auth, setAuth, isAuth]}>
       {children}
     </AuthContext.Provider>
   );

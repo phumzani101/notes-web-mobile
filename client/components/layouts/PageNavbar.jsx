@@ -33,8 +33,8 @@ const PageNavbar = () => {
                 title={auth?.user?.name}
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="/auth/signin" as={Link}>
-                  Profile
+                <NavDropdown.Item href="/dashboard" as={Link}>
+                  Dashboard
                 </NavDropdown.Item>
                 <a
                   className="dropdown-item"
